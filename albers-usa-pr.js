@@ -1,5 +1,7 @@
 // A modified d3.geo.albersUsa to include Puerto Rico.
 function albersUsaPr() {
+  var ε = 1e-6;
+
   var lower48 = d3.geo.albers();
 
   // EPSG:3338
