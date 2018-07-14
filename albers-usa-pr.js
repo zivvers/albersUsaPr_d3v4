@@ -1,23 +1,23 @@
-// A modified d3.geo.albersUsa to include Puerto Rico.
+// A modified d3.geoAlbersUsa to include Puerto Rico.
 function albersUsaPr() {
   var ε = 1e-6;
 
-  var lower48 = d3.geo.albers();
+  var lower48 = d3.geoAlbers();
 
   // EPSG:3338
-  var alaska = d3.geo.conicEqualArea()
+  var alaska = d3.geoConicEqualArea()
       .rotate([154, 0])
       .center([-2, 58.5])
       .parallels([55, 65]);
 
   // ESRI:102007
-  var hawaii = d3.geo.conicEqualArea()
+  var hawaii = d3.geoConicEqualArea()
       .rotate([157, 0])
       .center([-3, 19.9])
       .parallels([8, 18]);
 
   // XXX? You should check that this is a standard PR projection!
-  var puertoRico = d3.geo.conicEqualArea()
+  var puertoRico = d3.geoConicEqualArea()
       .rotate([66, 0])
       .center([0, 18])
       .parallels([8, 18]);

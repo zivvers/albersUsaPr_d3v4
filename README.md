@@ -1,1 +1,1 @@
-A modified version of `d3.geo.albersUsa` that includes Puerto Rico.
+A modified version of `d3.geoAlbersUsa` that includes Puerto Rico for d3 v4!
